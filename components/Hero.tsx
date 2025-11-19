@@ -4,6 +4,12 @@ import PixelReveal from './ui/PixelReveal';
 import StatusGraph from './ui/StatusGraph';
 
 const Hero: React.FC = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle email submission logic here
+    console.log("Email submitted");
+  };
+
   return (
     <section className="relative min-h-screen pt-32 flex flex-col justify-center border-b border-white/10 overflow-hidden bg-gradient-to-b from-[#050505] to-[#0a0500]">
       {/* Dithered Orange Glow Background */}
@@ -49,12 +55,32 @@ const Hero: React.FC = () => {
             </PixelReveal>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto justify-center lg:justify-start">
-             <PixelReveal delay={0.6} rows={10} columns={30} className="w-full sm:w-fit">
-                <Button variant="primary" icon className="w-full sm:w-auto">Start Closing Deals</Button>
-             </PixelReveal>
-             <PixelReveal delay={0.7} rows={10} columns={30} className="w-full sm:w-fit">
-                <Button variant="secondary" className="w-full sm:w-auto">How it Works</Button>
+          {/* Email Input & CTA Form */}
+          <div className="w-full max-w-md lg:max-w-xl">
+             <PixelReveal delay={0.6} rows={12} columns={50} className="w-full">
+                <form 
+                  onSubmit={handleSubmit} 
+                  className="flex flex-col sm:flex-row gap-4 w-full"
+                >
+                  <input 
+                    type="email" 
+                    placeholder="ENTER YOUR EMAIL" 
+                    required
+                    className="
+                        w-full sm:flex-1 bg-white/5 border border-white/10 p-4 
+                        font-mono text-sm text-white placeholder:text-white/30 uppercase tracking-wider
+                        focus:outline-none focus:border-orange-500 focus:bg-white/10 transition-all duration-300
+                    "
+                  />
+                  <Button 
+                    variant="primary" 
+                    icon 
+                    type="submit"
+                    className="w-full sm:w-auto whitespace-nowrap"
+                  >
+                    Start Closing Deals
+                  </Button>
+                </form>
              </PixelReveal>
           </div>
         </div>
