@@ -16,12 +16,12 @@ const Differentiation: React.FC = () => {
     <section id="advantage" className="py-24 border-b border-white/10 bg-white/[0.02] overflow-hidden relative">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            {/* Left Column: Heading */}
-            <div className="lg:col-span-5 flex flex-col justify-start">
+            {/* Left Column: Heading - Centered Mobile */}
+            <div className="lg:col-span-5 flex flex-col justify-start items-center text-center lg:items-start lg:text-left">
                 <div className="mb-12 lg:mb-0">
                     <div className="text-4xl md:text-6xl font-bold mb-8 uppercase leading-[0.9]">
-                        <div className="w-fit mb-2">Your Unfair</div>
-                        <div className="w-fit text-orange-500">Advantage</div>
+                        <div className="w-fit mb-2 mx-auto lg:mx-0">Your Unfair</div>
+                        <div className="w-fit text-orange-500 mx-auto lg:mx-0">Advantage</div>
                     </div>
                     <div className="w-full">
                       <p className="text-lg text-white/60 mb-8 leading-relaxed">
@@ -29,7 +29,7 @@ const Differentiation: React.FC = () => {
                           Stop fighting for scraps and start eating at the big table.
                       </p>
                     </div>
-                    <div className="w-fit">
+                    <div className="w-fit mx-auto lg:mx-0">
                       <div className="font-mono text-xs border border-orange-500/30 bg-orange-500/5 inline-flex items-center px-4 py-2 uppercase tracking-wider text-orange-500">
                           <span className="w-2 h-2 bg-orange-500 mr-3 animate-pulse"/>
                           Market Leader Protocol
@@ -43,7 +43,7 @@ const Differentiation: React.FC = () => {
                 {points.map((point, i) => (
                     <MagicCard key={i} className="group h-full min-h-[200px]">
                       <div className="w-full h-full">
-                        <div className="flex flex-col gap-4 p-8 h-full justify-start">
+                        <div className="flex flex-col gap-4 p-8 h-full justify-start text-left">
                             <div className="w-8 h-8 border border-white/20 flex items-center justify-center text-white/40 group-hover:bg-orange-500 group-hover:text-white group-hover:border-orange-500 transition-colors duration-300">
                                 <Check className="w-4 h-4" />
                             </div>

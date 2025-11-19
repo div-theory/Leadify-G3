@@ -40,14 +40,14 @@ const Problem: React.FC = () => {
   return (
     <section className="py-24 border-b border-white/10 overflow-hidden relative">
       <div className="container mx-auto px-6">
-        <div className="mb-16 max-w-4xl">
+        <div className="mb-16 max-w-4xl mx-auto lg:mx-0 text-center lg:text-left">
             <div className="text-4xl md:text-6xl font-bold mb-6 uppercase leading-none">
                 <div className="block mb-2">Lead Generation Process</div>
                 <div className="text-orange-500">Is Broken</div>
             </div>
-            <div className="h-px w-24 bg-white mb-6" />
+            <div className="h-px w-24 bg-white mb-6 mx-auto lg:mx-0" />
             <div className="block">
-              <p className="text-xl text-white/60 max-w-2xl">
+              <p className="text-xl text-white/60 max-w-2xl mx-auto lg:mx-0">
                   Stop Burning Cash & Chasing Bad Leads that don’t convert. 
                   Most lead generation platforms drain your budget and deliver nothing in return.
               </p>

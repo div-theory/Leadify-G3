@@ -24,7 +24,7 @@ const HowItWorks: React.FC = () => {
     <section id="process" className="py-24 border-b border-white/10">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-16 mb-16">
-             <div className="lg:w-1/3">
+             <div className="lg:w-1/3 text-center lg:text-left">
                 <div className="block mb-6">
                   <h2 className="text-4xl md:text-6xl font-bold uppercase">How It Works</h2>
                 </div>
@@ -37,7 +37,7 @@ const HowItWorks: React.FC = () => {
                 {steps.map((step, i) => (
                     <div key={i} className="bg-[#050505] hover:bg-[#0a0a0a] transition-colors h-full group border border-transparent hover:border-orange-500/20 relative">
                        <div className="w-full h-full">
-                          <div className="p-10 flex flex-col gap-6 h-full">
+                          <div className="p-10 flex flex-col gap-6 h-full text-left">
                               <div className="font-mono text-4xl text-orange-500/40 font-bold group-hover:text-orange-500 transition-colors">0{i+1}</div>
                               <div>
                                   <h3 className="text-xl font-bold mb-4 uppercase">{step.title}</h3>

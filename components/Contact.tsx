@@ -45,7 +45,6 @@ const Contact: React.FC = () => {
         setEmailError('Invalid Format');
         return;
     }
-    // Form submission logic would go here
     console.log('Form submitted:', formData);
   };
 
@@ -54,8 +53,8 @@ const Contact: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
-          {/* Left Column: Copy & Contact Info */}
-          <div className="flex flex-col justify-center">
+          {/* Left Column: Copy & Contact Info - Centered Mobile */}
+          <div className="flex flex-col justify-center items-center text-center lg:items-start lg:text-left">
             <div className="mb-4 block">
               <h3 className="text-xs font-mono text-white/60 uppercase tracking-widest">
                 Don’t Let Another Lead Slip Away
@@ -78,7 +77,7 @@ const Contact: React.FC = () => {
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-6 w-full flex flex-col items-center lg:items-start">
               <div className="block">
                 <p className="text-orange-500 text-sm font-mono uppercase mb-4">Or reach us directly:</p>
               </div>
@@ -104,7 +103,7 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Right Column: Form */}
-          <div className="relative">
+          <div className="relative w-full">
             <div className="w-full h-full">
               <div className="bg-white/[0.02] border border-white/10 p-8 md:p-10 w-full">
                 <form className="flex flex-col gap-6" onSubmit={handleSubmit}>

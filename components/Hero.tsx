@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Button from './ui/Button';
 import PixelReveal from './ui/PixelReveal';
@@ -12,26 +11,26 @@ const Hero: React.FC = () => {
       
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20 relative z-10">
         
-        {/* Left Column: Copy */}
-        <div className="lg:col-span-8 flex flex-col justify-center items-start text-left">
-          <div className="font-mono text-xs text-white/60 mb-6 tracking-widest uppercase flex items-center gap-4">
+        {/* Left Column: Copy - Centered on Mobile, Left on LG */}
+        <div className="lg:col-span-8 flex flex-col justify-center items-center text-center lg:items-start lg:text-left">
+          <div className="font-mono text-xs text-white/60 mb-6 tracking-widest uppercase flex items-center gap-4 justify-center lg:justify-start">
             <span className="w-12 h-[1px] bg-white/40"></span>
             <div className="inline-block">
               <PixelReveal delay={0} rows={6} columns={30}>
                 Exclusive Pay Per Call Leads
               </PixelReveal>
             </div>
+            <span className="w-12 h-[1px] bg-white/40 lg:hidden"></span>
           </div>
           
-          <div className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] mb-8 uppercase">
-            <div className="flex flex-col items-start gap-2">
+          <div className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] mb-8 uppercase flex flex-col items-center lg:items-start gap-2">
               <PixelReveal delay={0.1} rows={12} columns={40} className="w-fit">
                 Start Receiving
               </PixelReveal>
               <PixelReveal delay={0.2} rows={12} columns={40} className="w-fit text-orange-500/90">
                 High-Intent Calls
               </PixelReveal>
-              <div className="flex flex-wrap gap-x-4 items-baseline">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-x-4 items-baseline">
                   <PixelReveal delay={0.3} rows={10} columns={10} className="w-fit text-white/50">
                     In
                   </PixelReveal>
@@ -39,7 +38,6 @@ const Hero: React.FC = () => {
                     48 Hours
                   </PixelReveal>
               </div>
-            </div>
           </div>
 
           <div className="max-w-2xl mb-10">
@@ -51,7 +49,7 @@ const Hero: React.FC = () => {
             </PixelReveal>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto justify-center lg:justify-start">
              <PixelReveal delay={0.6} rows={10} columns={30} className="w-full sm:w-fit">
                 <Button variant="primary" icon className="w-full sm:w-auto">Start Closing Deals</Button>
              </PixelReveal>

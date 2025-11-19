@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-20">
           
           {/* Column 1: Brand */}
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
              <div className="block mb-6 cursor-pointer">
                 <a href="#" onClick={(e) => { e.preventDefault(); scrollToTop(); }} className="block w-fit">
                     <Logo />
@@ -27,11 +27,11 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Column 2: Navigate */}
-          <div>
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="block mb-6">
                 <h4 className="text-white font-bold uppercase tracking-wider text-sm">Navigate</h4>
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 w-full">
                 {[
                     { name: 'Home', href: '#' },
                     { name: 'How It Works', href: '#process' },
@@ -52,29 +52,29 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Column 3: Get In Touch */}
-          <div>
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
              <div className="block mb-6">
                 <h4 className="text-white font-bold uppercase tracking-wider text-sm">Get In Touch</h4>
              </div>
-             <div className="flex flex-col gap-4">
+             <div className="flex flex-col gap-4 w-full items-center md:items-start">
                 <div className="block">
-                    <a href="tel:4692878087" className="flex items-start gap-3 group">
+                    <a href="tel:4692878087" className="flex items-center md:items-start gap-3 group">
                         <Phone className="w-4 h-4 text-orange-500 mt-1 flex-shrink-0" />
                         <span className="text-white/50 group-hover:text-white transition-colors text-sm font-mono">(469) 287-8087</span>
                     </a>
                 </div>
                 
                 <div className="block">
-                    <a href="mailto:info@leadifysystems.com" className="flex items-start gap-3 group">
+                    <a href="mailto:info@leadifysystems.com" className="flex items-center md:items-start gap-3 group">
                         <Mail className="w-4 h-4 text-orange-500 mt-1 flex-shrink-0" />
                         <span className="text-white/50 group-hover:text-white transition-colors text-sm font-mono">info@leadifysystems.com</span>
                     </a>
                 </div>
 
                 <div className="block">
-                    <div className="flex items-start gap-3">
+                    <div className="flex items-center md:items-start gap-3">
                         <MapPin className="w-4 h-4 text-orange-500 mt-1 flex-shrink-0" />
-                        <span className="text-white/50 text-sm font-mono leading-relaxed">
+                        <span className="text-white/50 text-sm font-mono leading-relaxed max-w-[200px] md:max-w-none">
                             6136 Frisco Square Blvd, Suite 400 Frisco, TX 75034
                         </span>
                     </div>
@@ -83,11 +83,11 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Column 4: Legal */}
-          <div>
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
              <div className="block mb-6">
                 <h4 className="text-white font-bold uppercase tracking-wider text-sm">Legal</h4>
              </div>
-             <div className="flex flex-col gap-3">
+             <div className="flex flex-col gap-3 w-full">
                 {['Privacy Policy', 'Terms & Conditions'].map((item, i) => (
                     <div key={i} className="block">
                         <a href="#" className="text-white/50 hover:text-orange-500 transition-colors text-sm font-mono">
@@ -101,7 +101,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
             <div className="text-white/30 text-xs font-mono">
                 © {new Date().getFullYear()} Leadify. All rights reserved.
             </div>
