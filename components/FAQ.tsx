@@ -1,8 +1,6 @@
-
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
-import PixelReveal from './ui/PixelReveal';
 
 interface FAQItem {
   question: string;
@@ -39,14 +37,14 @@ const FAQ: React.FC = () => {
     <section id="faq" className="py-24 border-b border-white/10 bg-[#050505]">
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="mb-16 text-center">
-          <PixelReveal className="block mb-6 mx-auto" rows={8} columns={30}>
+          <div className="block mb-6 mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold uppercase">
               Frequently Asked <span className="text-white/40">Questions</span>
             </h2>
-          </PixelReveal>
-          <PixelReveal className="block mx-auto" delay={0.1} rows={4} columns={30}>
+          </div>
+          <div className="block mx-auto">
             <p className="text-white/60 text-sm font-mono uppercase tracking-widest">Everything you need to know</p>
-          </PixelReveal>
+          </div>
         </div>
         
         <div className="border-t border-white/10">
@@ -56,11 +54,11 @@ const FAQ: React.FC = () => {
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full py-8 flex items-center justify-between text-left hover:bg-white/5 transition-colors px-4 -mx-4"
               >
-                <PixelReveal rows={4} columns={40} delay={0.05 * i} className="w-full">
+                <div className="w-full">
                     <span className="text-lg md:text-xl font-bold uppercase pr-8 group-hover:text-white/90 transition-colors block">
                     {faq.question}
                     </span>
-                </PixelReveal>
+                </div>
                 <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center border border-white/20 bg-black group-hover:border-white transition-all duration-300">
                   <motion.div
                     animate={{ rotate: openIndex === i ? 180 : 0 }}
@@ -81,11 +79,11 @@ const FAQ: React.FC = () => {
                     className="overflow-hidden"
                   >
                     <div className="pb-8 pr-12 pt-2">
-                      <PixelReveal rows={15} columns={60} duration={0.4} delay={0.1} blockColor="#050505">
+                      <div className="block">
                         <p className="text-white/60 font-mono text-sm leading-relaxed border-l-2 border-white/20 pl-6">
                             {faq.answer}
                         </p>
-                      </PixelReveal>
+                      </div>
                     </div>
                   </motion.div>
                 )}

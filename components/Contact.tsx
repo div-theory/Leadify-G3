@@ -1,7 +1,5 @@
-
 import React, { useState } from 'react';
 import { Phone, Mail } from 'lucide-react';
-import PixelReveal from './ui/PixelReveal';
 import Button from './ui/Button';
 import Input from './ui/Input';
 
@@ -58,56 +56,56 @@ const Contact: React.FC = () => {
           
           {/* Left Column: Copy & Contact Info */}
           <div className="flex flex-col justify-center">
-            <PixelReveal rows={4} columns={20} className="mb-4 block">
+            <div className="mb-4 block">
               <h3 className="text-xs font-mono text-white/60 uppercase tracking-widest">
                 Don’t Let Another Lead Slip Away
               </h3>
-            </PixelReveal>
+            </div>
             
             <div className="mb-8">
-               <PixelReveal rows={10} columns={30} delay={0.1} className="block">
+               <div className="block">
                  <h2 className="text-4xl md:text-6xl font-bold uppercase leading-[0.9] mb-4">
                    Start getting <br/>
                    exclusive, high-<br/>
                    intent calls <span className="text-orange-500">NOW</span>
                  </h2>
-               </PixelReveal>
+               </div>
             </div>
 
-            <PixelReveal rows={10} columns={40} delay={0.2} className="block mb-12">
+            <div className="block mb-12">
               <p className="text-white/60 text-lg font-light leading-relaxed max-w-md">
                 Ready to grow? Fill out the form or contact us directly. We typically respond within one business day.
               </p>
-            </PixelReveal>
+            </div>
 
             <div className="space-y-6">
-              <PixelReveal rows={4} columns={20} delay={0.3} className="block">
+              <div className="block">
                 <p className="text-orange-500 text-sm font-mono uppercase mb-4">Or reach us directly:</p>
-              </PixelReveal>
+              </div>
               
-              <PixelReveal rows={6} columns={20} delay={0.4} className="block">
+              <div className="block">
                 <a href="tel:4692878087" className="flex items-center gap-4 group w-fit">
                   <div className="w-10 h-10 border border-white/10 flex items-center justify-center bg-white/5 group-hover:border-orange-500 group-hover:text-orange-500 transition-colors">
                     <Phone className="w-4 h-4" />
                   </div>
                   <span className="text-white font-mono hover:text-orange-500 transition-colors">(469) 287-8087</span>
                 </a>
-              </PixelReveal>
+              </div>
 
-              <PixelReveal rows={6} columns={20} delay={0.5} className="block">
+              <div className="block">
                 <a href="mailto:info@leadifysystems.com" className="flex items-center gap-4 group w-fit">
                   <div className="w-10 h-10 border border-white/10 flex items-center justify-center bg-white/5 group-hover:border-orange-500 group-hover:text-orange-500 transition-colors">
                     <Mail className="w-4 h-4" />
                   </div>
                   <span className="text-white font-mono hover:text-orange-500 transition-colors">info@leadifysystems.com</span>
                 </a>
-              </PixelReveal>
+              </div>
             </div>
           </div>
 
           {/* Right Column: Form */}
           <div className="relative">
-            <PixelReveal rows={20} columns={20} delay={0.2} className="w-full h-full">
+            <div className="w-full h-full">
               <div className="bg-white/[0.02] border border-white/10 p-8 md:p-10 w-full">
                 <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
                   <Input 
@@ -150,7 +148,7 @@ const Contact: React.FC = () => {
                   </Button>
                 </form>
               </div>
-            </PixelReveal>
+            </div>
           </div>
 
         </div>

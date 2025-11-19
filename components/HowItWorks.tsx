@@ -1,6 +1,4 @@
-
 import React from 'react';
-import PixelReveal from './ui/PixelReveal';
 
 const steps = [
   {
@@ -27,18 +25,18 @@ const HowItWorks: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-16 mb-16">
              <div className="lg:w-1/3">
-                <PixelReveal className="block mb-6" rows={8} columns={30}>
+                <div className="block mb-6">
                   <h2 className="text-4xl md:text-6xl font-bold uppercase">How It Works</h2>
-                </PixelReveal>
-                <PixelReveal className="block" delay={0.1} rows={12} columns={30}>
+                </div>
+                <div className="block">
                   <p className="text-white/60">Leadify connects you straight to ready-to-book callers in 4 simple steps.</p>
-                </PixelReveal>
+                </div>
              </div>
              
              <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10">
                 {steps.map((step, i) => (
                     <div key={i} className="bg-[#050505] hover:bg-[#0a0a0a] transition-colors h-full group border border-transparent hover:border-orange-500/20 relative">
-                       <PixelReveal className="w-full h-full" delay={i * 0.1} rows={20} columns={20}>
+                       <div className="w-full h-full">
                           <div className="p-10 flex flex-col gap-6 h-full">
                               <div className="font-mono text-4xl text-orange-500/40 font-bold group-hover:text-orange-500 transition-colors">0{i+1}</div>
                               <div>
@@ -46,7 +44,7 @@ const HowItWorks: React.FC = () => {
                                   <p className="text-white/50 text-sm">{step.desc}</p>
                               </div>
                           </div>
-                       </PixelReveal>
+                       </div>
                     </div>
                 ))}
              </div>

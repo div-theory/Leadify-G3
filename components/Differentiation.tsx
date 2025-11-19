@@ -1,7 +1,5 @@
-
 import React from 'react';
 import { Check } from 'lucide-react';
-import PixelReveal from './ui/PixelReveal';
 import MagicCard from './ui/MagicCard';
 
 const points = [
@@ -22,21 +20,21 @@ const Differentiation: React.FC = () => {
             <div className="lg:col-span-5 flex flex-col justify-start">
                 <div className="mb-12 lg:mb-0">
                     <div className="text-4xl md:text-6xl font-bold mb-8 uppercase leading-[0.9]">
-                        <PixelReveal className="w-fit mb-2" rows={8} columns={30}>Your Unfair</PixelReveal>
-                        <PixelReveal className="w-fit text-orange-500" delay={0.1} rows={8} columns={30}>Advantage</PixelReveal>
+                        <div className="w-fit mb-2">Your Unfair</div>
+                        <div className="w-fit text-orange-500">Advantage</div>
                     </div>
-                    <PixelReveal delay={0.2} rows={12} columns={40} className="w-full">
+                    <div className="w-full">
                       <p className="text-lg text-white/60 mb-8 leading-relaxed">
                           How is Leadify Different? We focus on quality connections, not just quantity. 
                           Stop fighting for scraps and start eating at the big table.
                       </p>
-                    </PixelReveal>
-                    <PixelReveal delay={0.3} rows={6} columns={20} className="w-fit">
+                    </div>
+                    <div className="w-fit">
                       <div className="font-mono text-xs border border-orange-500/30 bg-orange-500/5 inline-flex items-center px-4 py-2 uppercase tracking-wider text-orange-500">
                           <span className="w-2 h-2 bg-orange-500 mr-3 animate-pulse"/>
                           Market Leader Protocol
                       </div>
-                    </PixelReveal>
+                    </div>
                 </div>
             </div>
 
@@ -44,7 +42,7 @@ const Differentiation: React.FC = () => {
             <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
                 {points.map((point, i) => (
                     <MagicCard key={i} className="group h-full min-h-[200px]">
-                      <PixelReveal className="w-full h-full" delay={i * 0.1} rows={20} columns={20} blockColor="#0a0a0a">
+                      <div className="w-full h-full">
                         <div className="flex flex-col gap-4 p-8 h-full justify-start">
                             <div className="w-8 h-8 border border-white/20 flex items-center justify-center text-white/40 group-hover:bg-orange-500 group-hover:text-white group-hover:border-orange-500 transition-colors duration-300">
                                 <Check className="w-4 h-4" />
@@ -54,7 +52,7 @@ const Differentiation: React.FC = () => {
                                 <p className="text-white/50 text-sm leading-relaxed">{point.desc}</p>
                             </div>
                         </div>
-                      </PixelReveal>
+                      </div>
                     </MagicCard>
                 ))}
             </div>
