@@ -10,8 +10,26 @@ const Hero: React.FC = () => {
     console.log("Email submitted");
   };
 
+  // Ticker content
+  const tickerText = "STOP CHASING LEADS. START CLOSING DEALS.";
+  const tickerItems = Array(8).fill(tickerText); // Reduced count slightly since we duplicate the group
+
   return (
     <section className="relative min-h-screen pt-32 flex flex-col justify-center border-b border-white/10 overflow-hidden bg-gradient-to-b from-[#050505] to-[#0a0500]">
+      
+      {/* Inline styles for the marquee animation */}
+      <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee-infinite {
+          display: flex;
+          width: max-content;
+          animation: marquee 40s linear infinite;
+        }
+      `}</style>
+
       {/* Dithered Orange Glow Background */}
       <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-orange-500/10 blur-[120px] rounded-full pointer-events-none mix-blend-screen -translate-y-1/2 translate-x-1/3" />
       
@@ -150,12 +168,23 @@ const Hero: React.FC = () => {
 
       {/* Ticker/Marquee at bottom of Hero */}
       <div className="w-full border-t border-white/10 py-4 overflow-hidden bg-black/50 backdrop-blur-sm">
-        <div className="flex whitespace-nowrap animate-marquee gap-12">
-          {Array(10).fill("STOP CHASING LEADS. START CLOSING DEALS.").map((text, i) => (
-            <span key={i} className="font-mono text-sm text-white/40 uppercase tracking-widest flex items-center gap-12">
-              {text} <span className="w-2 h-2 bg-orange-500 rotate-45" />
-            </span>
-          ))}
+        <div className="animate-marquee-infinite">
+          {/* Group 1 */}
+          <div className="flex gap-12 pr-12">
+            {tickerItems.map((text, i) => (
+              <span key={`g1-${i}`} className="font-mono text-sm text-white/40 uppercase tracking-widest flex items-center gap-12 whitespace-nowrap">
+                {text} <span className="w-2 h-2 bg-orange-500 rotate-45" />
+              </span>
+            ))}
+          </div>
+          {/* Group 2 (Duplicate for seamless loop) */}
+          <div className="flex gap-12 pr-12">
+            {tickerItems.map((text, i) => (
+              <span key={`g2-${i}`} className="font-mono text-sm text-white/40 uppercase tracking-widest flex items-center gap-12 whitespace-nowrap">
+                {text} <span className="w-2 h-2 bg-orange-500 rotate-45" />
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>
